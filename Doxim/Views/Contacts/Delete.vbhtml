@@ -1,13 +1,13 @@
 ﻿@ModelType Doxim.Models.Contact
 @Code
-    ViewData("Title") = "Delete"
+    ViewData("Title") = "Delete Contact"
 End Code
 
-<h2>Delete</h2>
+<h2>Delete Contact</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Contact</h4>
+<h3 style="color:indianred">Are you sure you want to delete this contact?</h3>
+@Html.ActionLink("Back to Contact List", "Index") 
+<div>    
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -47,8 +47,9 @@ End Code
         @Html.AntiForgeryToken()
 
         @<div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+             
+            <input id="btnDelete" type="submit" value="Delete Contact" class="btn btn-danger" /> 
+           
         </div>
     End Using
 </div>

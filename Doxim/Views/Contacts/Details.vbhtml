@@ -1,12 +1,12 @@
 ﻿@ModelType Doxim.Models.Contact
 @Code
-    ViewData("Title") = "Details"
+    ViewData("Title") = "Contact Details"
 End Code
 
-<h2>Details</h2>
-
+<h2>Contact Details</h2>
+@Html.ActionLink("Back to Contact List", "Index")
 <div>
-    <h4>Contact</h4>
+   
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -44,6 +44,6 @@ End Code
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", New With { .id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit Contact Details", "Edit Contact Details", New With {.id = Model.Id}) 
+   
 </p>

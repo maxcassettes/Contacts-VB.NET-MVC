@@ -30,7 +30,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Contacts App</p>
+            <p>&copy; @DateTime.Now.Year - Matt Cossette - Contacts App</p>
         </footer>
     </div>
    

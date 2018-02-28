@@ -1,15 +1,15 @@
 ﻿@ModelType Doxim.Models.Contact
 @Code
-    ViewData("Title") = "Create"
+    ViewData("Title") = "Create New Contact"
 End Code
 
-<h2>Create</h2>
-
+<h2>Add a New Contact</h2>
+@Html.ActionLink("Back to Contact List", "Index")
 @Using (Html.BeginForm()) 
     @Html.AntiForgeryToken()
     
     @<div class="form-horizontal">
-        <h4>Contact</h4>
+        
         <hr />
         @Html.ValidationSummary(True, "", New With { .class = "text-danger" })
         <div class="form-group">
@@ -46,12 +46,10 @@ End Code
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Save Contact" class="btn btn-danger" />
             </div>
         </div>
     </div>
 End Using
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+

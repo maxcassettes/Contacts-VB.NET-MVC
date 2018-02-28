@@ -2,6 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-color:#1a1919;
+    font-size: 16px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -16,8 +17,14 @@
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
-    white-space: normal;
+.dl-horizontal dt, .dl-horizontal dd {
+    white-space: pre-line;
+    
+}
+
+.dl-horizontal dd {
+   
+    padding-left:10px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -37,8 +44,8 @@ textarea {
 }
 
 #btnAddNew {
-    float:right !important;
-    margin-right:11em;
+  
+ 
 }
 
 .navbar {
@@ -52,5 +59,13 @@ textarea {
 }
 
 .tblHeader a {
-    color:white;
+     color: white;
+}
+
+#btnDelete {
+    margin-left:16%;
+}
+
+footer {
+    text-align: center;
 }
