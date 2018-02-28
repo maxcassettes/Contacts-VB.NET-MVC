@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title Contacts App</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,7 +18,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-    @Html.ActionLink("Contacts App", "Index", "Contacts", New With {.area = ""}, New With {.class = "navbar-brand"})
+    @Html.ActionLink("Contacts App", "Index", "Contacts", New With {.area = ""}, New With {.class = "navbar-brand", .title = "tooltip"})
 
             </div>
             <div class="navbar-collapse collapse">
@@ -38,7 +39,11 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required:=False)
     <script type="text/javascript">
+        $('.nameLink').tooltip({ tooltipClass: "tooltip-styling", })
         $("#SearchString").attr("placeholder", "Enter name...")
+     
     </script>
+  
+
 </body>
 </html>

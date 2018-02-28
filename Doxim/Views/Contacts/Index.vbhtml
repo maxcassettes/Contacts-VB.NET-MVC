@@ -14,18 +14,19 @@ End Code
 
 
     <input class="btn btn-primary" type="submit" value="Search" />
-     <button class="btn btn-danger" id="btnAddNew"> @Html.ActionLink("Add New Contact", "Create")</button>
+    
          </p>
     End Using
+@Html.ActionLink("Add New Contact", "Create", "", New With {.class = "btn btn-danger"})
 </p>
 
 <table class="table">
     <tr class="tblHeader">
         <th>
-            @Html.ActionLink("First Name", "Index", New With {.sortOrder = ViewBag.FirstNameSortParm})
+            @Html.ActionLink("First Name", "Index", New With {.sortOrder = ViewBag.FirstNameSortParm}, New With {.title = "Sort A-Z", .class = "nameLink"})
         </th>
         <th>
-            @Html.ActionLink("Last Name", "Index", New With {.sortOrder = ViewBag.NameSortParm})
+            @Html.ActionLink("Last Name", "Index", New With {.sortOrder = ViewBag.NameSortParm}, New With {.title = "Sort A-Z", .class = "nameLink"})
         </th>
         <th>
             @Html.DisplayNameFor(Function(model) model.PhoneNum)
