@@ -14,7 +14,7 @@ Namespace Models
         Public Property LastName As String
         <Phone>
         Const pattern As String = "\d{3}-\d{3}-\d{4}"
-        <RegularExpression(pattern)>
+        <RegularExpression(pattern, ErrorMessage:="Please enter phone number as 999-999-9999")>
         <Display(Name:="Phone #")>
         Public Property PhoneNum As String
         <EmailAddress>
